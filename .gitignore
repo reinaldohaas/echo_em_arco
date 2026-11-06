@@ -1,0 +1,50 @@
+# Credenciais e acesso ao servidor de dados
+.env
+radar/.env
+radar/baixar_ftp_chapeco.py
+radar/baixar_sdc_ftp.py
+radar/INSTRUCOES_ANTIGRAVITY_FTP.md
+
+# Dados brutos e de terceiros
+radar/dados_chp_vol/
+radar/dados_redemet/
+radar/dados_osm/
+radar/mi/
+radar/sg/
+satelite/dados_goes19/
+satelite/dados_goes19_vis/
+assets/jornais/
+assets/radar_4paineis_chapeco_1030.jpg
+assets/radar_bow_echo_topo_71c.jpg
+assets/radar_zoom_circulos_chapeco.jpg
+assets/conceito_*
+WhatsApp Image*
+Gravando*
+
+# Gerados
+video_work/
+video_v2/
+teste_voz/
+__pycache__/
+*.pyc
+
+# Primeira versão, com conclusões que os dados não sustentam
+video_microexplosao_chapeco.mp4
+gerar_video_microexplosao.py
+incorporar_voz_vlab.py
+prompt_*.md
+readme_arquivo_do_projeto_c.md
+ordem_*.txt
+LEIA-ME*
+roteiro-*
+*.zip
+*.pptx
+assets/cena_0*
+assets/radar_v2/descida.png
+assets/radar_v2/linha.png
+assets/radar_v2/cc.png
+assets/radar_v2/perfil.png
+assets/radar_v2/v_rel.png
+assets/radar_v2/z.png
+**/chapeco_4paineis_reais_1030.png
+**/chapeco_corte_vertical_rhi_1030.png

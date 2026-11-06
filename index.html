@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microexplosão ou Tornado em Chapecó</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    :root {
+      --bg-page: #070a12;
+      --bg-card: #0f172a;
+      --bg-panel: #131c31;
+      --border-cyan: rgba(56, 189, 248, 0.35);
+      --border-subtle: rgba(148, 163, 184, 0.16);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --cyan: #38bdf8;
+      --emerald: #10b981;
+      --amber: #fbbf24;
+      --rose: #f43f5e;
+      --purple: #a855f7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.65;
+      background-image:
+        radial-gradient(circle at 12% 8%, rgba(56, 189, 248, 0.12), transparent 42%),
+        radial-gradient(circle at 88% 15%, rgba(244, 63, 94, 0.09), transparent 40%),
+        radial-gradient(circle at 50% 85%, rgba(16, 185, 129, 0.08), transparent 48%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1340px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* HEADER */
+    .hero {
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(9, 14, 26, 0.96));
+      border: 1px solid var(--border-cyan);
+      border-radius: 18px;
+      padding: 2.2rem 2.4rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .badge-cyan { background: rgba(56, 189, 248, 0.14); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.4); }
+    .badge-emerald { background: rgba(16, 185, 129, 0.14); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .badge-amber { background: rgba(251, 191, 36, 0.14); color: var(--amber); border: 1px solid rgba(251, 191, 36, 0.4); }
+    .badge-rose { background: rgba(244, 63, 94, 0.14); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.4); }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.35rem;
+      font-weight: 800;
+      line-height: 1.18;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .hero-sub {
+      color: #cbd5e1;
+      font-size: 1.08rem;
+      max-width: 980px;
+      margin-bottom: 1.4rem;
+    }
+
+    /* KPI METRICS */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .kpi-card {
+      background: rgba(19, 28, 49, 0.88);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--cyan);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+    }
+
+    .kpi-card.amber { border-left-color: var(--amber); }
+    .kpi-card.rose { border-left-color: var(--rose); }
+    .kpi-card.emerald { border-left-color: var(--emerald); }
+
+    .kpi-label {
+      font-size: 0.76rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .kpi-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .kpi-desc {
+      font-size: 0.83rem;
+      color: #cbd5e1;
+      margin-top: 0.2rem;
+    }
+
+    /* SECTION CARDS */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-cyan);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1.4rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      color: #fff;
+    }
+
+    /* VIDEO DUAL GRID */
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 1024px) {
+      .video-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 1rem 1rem 3rem; }
+      .hero, .section-card { padding: 1.1rem; }
+      h1 { font-size: 1.8rem; }
+    }
+
+    .video-box {
+      background: #050811;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 0.85rem;
+    }
+
+    .video-box video {
+      width: 100%;
+      border-radius: 8px;
+      background: #000;
+      display: block;
+    }
+
+    .chapter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.85rem;
+    }
+
+    .btn-pill {
+      background: rgba(56, 189, 248, 0.1);
+      color: #e2e8f0;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.83rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-pill:hover, .btn-pill.active {
+      background: var(--cyan);
+      color: #070a12;
+      border-color: var(--cyan);
+    }
+
+    /* INTERACTIVE SIMULATOR */
+    .sim-layout {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 1080px) {
+      .sim-layout { grid-template-columns: 1fr; }
+    }
+
+    .canvas-wrap {
+      background: #060913;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 12px;
+      padding: 0.75rem;
+      position: relative;
+    }
+
+    canvas#simCanvas {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      border-radius: 8px;
+      display: block;
+      background: #080c15;
+    }
+
+    .controls-panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .scene-tabs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.45rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .scene-tab {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--border-subtle);
+      color: #cbd5e1;
+      padding: 0.6rem 0.5rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .scene-tab.active {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--cyan);
+      color: #ffffff;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+    }
+
+    .control-group {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+    }
+
+    .control-group label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 0.4rem;
+    }
+
+    .control-group input[type="range"] {
+      width: 100%;
+      accent-color: var(--cyan);
+      cursor: pointer;
+    }
+
+    .narration-box {
+      background: rgba(8, 12, 21, 0.9);
+      border-left: 4px solid var(--cyan);
+      border-radius: 8px;
+      padding: 0.95rem 1.1rem;
+      font-size: 0.93rem;
+      color: #e2e8f0;
+    }
+
+    .voice-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin-top: 0.75rem;
+    }
+
+    .btn-voice {
+      padding: 0.45rem 0.85rem;
+      border-radius: 7px;
+      border: 1px solid var(--border-subtle);
+      background: #1e293b;
+      color: #f8fafc;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-voice.primary {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: var(--emerald);
+      color: #34d399;
+    }
+
+    .btn-voice:hover {
+      filter: brightness(1.15);
+    }
+
+    /* THEORY & TABLE */
+    .theory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .theory-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.3rem;
+    }
+
+    .theory-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      color: var(--cyan);
+      margin-bottom: 0.65rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .formula-box {
+      background: #070a12;
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin: 0.75rem 0;
+      overflow-x: auto;
+    }
+
+    table.diag-table {
+      display: block;
+      overflow-x: auto;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.8rem;
+      font-size: 0.92rem;
+    }
+
+    table.diag-table th, table.diag-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      text-align: left;
+    }
+
+    table.diag-table th {
+      background: rgba(30, 41, 59, 0.85);
+      color: var(--cyan);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .verdict-ok {
+      color: #34d399;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .gallery-item {
+      background: #070a12;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .gallery-caption {
+      padding: 0.6rem 0.8rem;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- CABEÇALHO PRINCIPAL -->
+    <header class="hero">
+      <div class="badge-row">
+        <span class="badge badge-amber"><i class="fa-solid fa-wind"></i> Chapecó (SC) · 04/11/2026</span>
+        <span class="badge badge-emerald"><i class="fa-solid fa-magnifying-glass-chart"></i> Hipótese principal: microexplosão</span>
+        <span class="badge badge-rose"><i class="fa-solid fa-circle-question"></i> Tornado não descartado</span>
+        <span class="badge badge-cyan">Análise preliminar · UFSC · Prof. Reinaldo Haas</span>
+      </div>
+      <h1>Microexplosão ou tornado em Chapecó?</h1>
+      <p class="hero-sub">
+        Ventos de 126 km/h destruíram hangares e telhados na manhã de 4 de novembro de 2026, e a Defesa Civil confirmou tornado. Os dados brutos do radar e do GOES-19 favorecem uma microexplosão dentro de uma linha em arco, mas um sinal sobre o aeroporto segue sem explicação, e só o levantamento de danos fecha o caso. Horários locais (UTC−3).
+      </p>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Forma no radar</div>
+          <div class="kpi-val">Linha em arco</div>
+          <div class="kpi-desc">Favorece vento em linha reta, sem excluir tornado</div>
+        </div>
+        <div class="kpi-card rose">
+          <div class="kpi-label">Z máximo perto do solo, 10:30</div>
+          <div class="kpi-val">65,5 dBZ</div>
+          <div class="kpi-desc">Só 59,5 dBZ com CC ≥ 0,90: o pico está no sinal anômalo</div>
+        </div>
+        <div class="kpi-card amber">
+          <div class="kpi-label">Principal pendência</div>
+          <div class="kpi-val">CC &approx; 0,74</div>
+          <div class="kpi-desc">Com ZDR &approx; 0 e KDP baixo: granizo em fusão ou detritos</div>
+        </div>
+        <div class="kpi-card emerald">
+          <div class="kpi-label">Rajada noticiada</div>
+          <div class="kpi-val">126 km/h</div>
+          <div class="kpi-desc">35 m/s. Falta a direção de queda em campo</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- QUADRO 1: VÍDEO E LOOP DO RADAR -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <i class="fa-solid fa-film" style="color: var(--cyan);"></i>
+          <span>1. O vídeo e a gravação do radar</span>
+        </div>
+        <span class="badge badge-cyan">4min48 · Voz clonada por computador</span>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-box">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.55rem;">
+            <strong style="color:#f8fafc; font-size:0.95rem;"><i class="fa-solid fa-circle-play" style="color:var(--cyan);"></i> Microexplosão ou tornado em Chapecó?</strong>
+            <a href="video_chapeco_v2.mp4" download class="btn-pill"><i class="fa-solid fa-download"></i> Baixar MP4</a>
+          </div>
+          <video id="mainVideo" controls preload="metadata" poster="assets/radar_v2/poster.jpg">
+            <source src="video_chapeco_v2.mp4" type="video/mp4" />
+            Seu navegador não suporta reprodução de vídeo HTML5.
+          </video>
+          <div class="chapter-pills">
+            <button class="btn-pill" onclick="seekMainVideo(0)">A pergunta (0:00)</button>
+            <button class="btn-pill" onclick="seekMainVideo(28.5)">Dois fenômenos (0:28)</button>
+            <button class="btn-pill" onclick="seekMainVideo(57.8)">Por que o ar despenca (0:57)</button>
+            <button class="btn-pill" onclick="seekMainVideo(85.5)">Radar e satélite (1:25)</button>
+            <button class="btn-pill" onclick="seekMainVideo(140.7)">Três pistas (2:20)</button>
+            <button class="btn-pill" onclick="seekMainVideo(201)">O que falta (3:21)</button>
+            <button class="btn-pill" onclick="seekMainVideo(244)">Conclusão (4:04)</button>
+          </div>
+          <p style="margin-top:0.85rem; font-size:0.88rem; color:#fde68a; background:rgba(251,191,36,0.1); padding:0.75rem 0.9rem; border-radius:8px; border:1px solid rgba(251,191,36,0.4);">
+            <strong>Isto é ciência, não veredito.</strong> Código e resultados estão abertos no <a href="https://github.com/reinaldohaas/echo_em_arco" style="color:#fde68a;">GitHub</a>, para qualquer pessoa usar e refutar.
+          </p>
+        </div>
+
+        <div class="video-box">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.55rem;">
+            <strong style="color:#fbbf24; font-size:0.95rem;"><i class="fa-solid fa-tower-broadcast"></i> Gravação do radar (09:16–11:45)</strong>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:0.78rem; color:#94a3b8;">Oeste de SC / Norte do RS</span>
+          </div>
+          <video id="radarVideo" controls loop autoplay muted playsinline>
+            <source src="assets/radar_chapeco_20261104.mp4" type="video/mp4" />
+          </video>
+          <ul style="margin-top:0.85rem; padding-left:1.2rem; display:flex; flex-direction:column; gap:0.25rem; font-size:0.88rem; color:#cbd5e1;">
+            <li><strong>09:16–09:56:</strong> a linha se organiza sobre o oeste de SC e a fronteira com o RS.</li>
+            <li><strong>10:29–10:48:</strong> o arco cruza Chapecó.</li>
+            <li><strong>11:15–11:45:</strong> o sistema avança para leste, mantendo a forma.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUADRO 2: ESQUEMAS ILUSTRATIVOS -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <i class="fa-solid fa-sliders" style="color: var(--emerald);"></i>
+          <span>2. Esquemas ilustrativos (não são dados)</span>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+          <button class="btn-pill active" id="btnPlayPause" onclick="toggleSimPlay()"><i class="fa-solid fa-pause"></i> Pausar Animação</button>
+          <button class="btn-pill" onclick="resetSimScene()"><i class="fa-solid fa-rotate-left"></i> Reiniciar Cena</button>
+        </div>
+      </div>
+
+      <div class="scene-tabs" id="sceneTabs">
+        <button class="scene-tab active" onclick="selectScene(1)">Cena 1 · A pergunta</button>
+        <button class="scene-tab" onclick="selectScene(2)">Cena 2 · Modelos</button>
+        <button class="scene-tab" onclick="selectScene(3)">Cena 3 · Microexplosão</button>
+        <button class="scene-tab" onclick="selectScene(4)">Cena 4 · Danos</button>
+      </div>
+
+      <div class="sim-layout">
+        <div class="canvas-wrap">
+          <canvas id="simCanvas" width="1280" height="720"></canvas>
+        </div>
+
+        <div class="controls-panel">
+          <div class="narration-box">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:0.76rem; color:var(--cyan); text-transform:uppercase; margin-bottom:0.3rem;" id="simSceneTag">
+              CENA 1 · A PERGUNTA E O QUE OS DADOS DIZEM
+            </div>
+            <div id="simSceneText">
+              Ventos de 126 km/h em Chapecó foram noticiados como tornado, confirmado pela Defesa Civil. Os dados do radar e do satélite favorecem uma microexplosão, mas deixam uma pendência: o CC anômalo sobre o aeroporto.
+            </div>
+            <div class="voice-bar">
+              <button class="btn-voice primary" onclick="speakCurrentScene()"><i class="fa-solid fa-volume-high"></i> Ouvir Voz</button>
+              <button class="btn-voice" onclick="pauseSpeech()"><i class="fa-solid fa-pause"></i> Pausar</button>
+              <button class="btn-voice" onclick="stopSpeech()"><i class="fa-solid fa-stop"></i> Parar</button>
+              <select id="speechRate" class="btn-voice" style="background:#0f172a;">
+                <option value="0.85">0.85x</option>
+                <option value="1.0" selected>1.0x (Normal)</option>
+                <option value="1.2">1.2x</option>
+                <option value="1.4">1.4x</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Controles Físicos em Tempo Real -->
+          <div class="control-group">
+            <label>
+              <span>Refletividade do Núcleo ($Z$)</span>
+              <span id="lblDbz" style="color:var(--rose); font-family:'JetBrains Mono',monospace;">59 dBZ</span>
+            </label>
+            <input type="range" id="slDbz" min="35" max="68" step="1" value="59" oninput="updateSimParams()" />
+            <div style="font-size:0.78rem; color:var(--text-muted); margin-top:0.25rem;">
+              Só muda o rótulo e as cores do esquema.
+            </div>
+          </div>
+
+
+
+          <div class="control-group">
+            <label>
+              <span>Jato de Entrada Traseiro (RIJ) & Resfriamento ($\Delta\theta'$)</span>
+              <span id="lblRij" style="color:var(--amber); font-family:'JetBrains Mono',monospace;">126 km/h (35,0 m/s)</span>
+            </label>
+            <input type="range" id="slRij" min="40" max="150" step="2" value="126" oninput="updateSimParams()" />
+            <div style="font-size:0.78rem; color:var(--text-muted); margin-top:0.25rem;">
+              Ajusta a aceleração descendente e a velocidade de divergência na frente de rajada.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUADRO 3: FÍSICA E SÍNTESE -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <i class="fa-solid fa-book-open" style="color: var(--amber);"></i>
+          <span>3. Física e quadro-síntese</span>
+        </div>
+      </div>
+
+      <div class="theory-grid">
+        <div class="theory-card">
+          <h3><i class="fa-solid fa-cloud-showers-heavy"></i> Por que o ar desce</h3>
+          <p>A flutuabilidade soma o déficit térmico e o peso dos hidrometeoros:</p>
+          <div class="formula-box">
+            $$B = g\left(\frac{\theta'}{\theta_0} + 0{,}61\,q_v' - q_h\right)$$
+          </div>
+          <p>Como ordem de grandeza, $q_h = 8\text{ g/kg}$ pesa o mesmo que cerca de 2,4 K de déficit de temperatura. É um exemplo, não uma medida deste evento.</p>
+        </div>
+        <div class="theory-card">
+          <h3><i class="fa-solid fa-satellite-dish"></i> O que o CC mede</h3>
+          <div class="formula-box">
+            $$\rho_{hv} = \frac{\left|\langle S_{HH}\,S_{VV}^* \rangle\right|}{\sqrt{\langle |S_{HH}|^2 \rangle \langle |S_{VV}|^2 \rangle}}$$
+          </div>
+          <p>Em chuva, fica perto de 1. Cai com mistura de formas e tamanhos: granizo em fusão, detritos ou gradientes fortes dentro do feixe. Por isso, sozinho, não identifica a causa.</p>
+        </div>
+        <div class="theory-card">
+          <h3><i class="fa-solid fa-ruler-vertical"></i> Alturas: o que é "junto ao solo"</h3>
+          <p>O radar está a 822 m de altitude. A 0,5°, o feixe passa ~100 m acima do radar sobre o aeroporto, a cerca de 280 m do chão. Abaixo disso não há dado, e as alturas desta página são acima do radar. A fusão, estimada no próprio radar depois da passagem, fica a ~3,0–3,3 km acima dele.</p>
+        </div>
+      </div>
+
+      <table class="diag-table">
+        <thead>
+          <tr>
+            <th>Evidência</th>
+            <th>Observado</th>
+            <th>Leitura</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Forma no radar</strong></td><td>Linha em arco; sem supercélula isolada</td><td>Favorece vento em linha reta; não exclui tornado</td></tr>
+          <tr><td><strong>Ciclo da corrente ascendente</strong></td><td>Coluna de ZDR às 10:12–10:18; topos esfriam de −79 a −85 °C até 10:20</td><td>Compatível com microexplosão logo depois</td></tr>
+          <tr><td><strong>Chuva perto do solo</strong></td><td>Z com CC ≥ 0,90: 58, 59,5 e 58 dBZ na camada mais baixa; em 2–3 km cai de 63,5 para 57</td><td>Apoio fraco; não há descida nítida de um máximo</td></tr>
+          <tr><td><strong>Vento atrás da linha</strong></td><td>27 m/s a 130 m; 18 m/s a 810 m, às 10:30</td><td>Compatível com saída de ar; só uma varredura e só a componente radial</td></tr>
+          <tr><td><strong>Cisalhamento</strong></td><td>Às 10:30, em 2 km e sem gates dobrados, fica entre os maiores da varredura até ~0,7 km acima do radar; não se mantém às 10:24 nem às 10:36</td><td>Sinal localizado, mas ambíguo: radar único não separa rotação de cisalhamento</td></tr>
+          <tr><td><strong>CC anômalo</strong></td><td>CC ≈ 0,74, ZDR ≈ 0 e KDP baixo; só neste núcleo, entre 45 com Z ≥ 55 dBZ</td><td><strong>Principal pendência:</strong> granizo em fusão ou detritos</td></tr>
+          <tr><td><strong>Danos</strong></td><td>Sem levantamento da direção de queda</td><td>Teste que falta para decidir</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- QUADRO 4: EVIDÊNCIAS -->
+    <section class="section-card" id="corte">
+      <div class="section-header">
+        <div class="section-title">
+          <i class="fa-solid fa-satellite-dish" style="color: var(--cyan);"></i>
+          <span>4. Corte vertical e hidrometeoros</span>
+        </div>
+        <span class="badge badge-cyan">Volumes Rainbow5 · Radar banda S · SDC/SC</span>
+      </div>
+      <div class="gallery-item" style="margin-bottom:1.25rem;">
+        <a href="assets/radar_v2/corte_vertical.png" target="_blank" rel="noopener"><img src="assets/radar_v2/corte_vertical.png" alt="Corte vertical de Z, ZDR, CC, KDP e classes, de 10:12 a 10:42, seguindo o núcleo" /></a>
+        <div class="gallery-caption">Corte ao longo do movimento, seguindo o núcleo, de 10:12 a 10:42. Linhas: Z, ZDR, CC, KDP e classes por regras simples, não validadas. Tracejado: fusão estimada. Longe de 10:30, a posição do núcleo é extrapolada.</div>
+      </div>
+      <div class="theory-grid">
+        <div class="theory-card">
+          <h3><i class="fa-solid fa-droplet"></i> A coluna é de chuva intensa</h3>
+          <p>De 10:12 a 10:24, os gates mais fortes têm CC de 0,98 a 0,99 e KDP de 2 a 3 °/km. O ZDR de 1,3 a 2,6 dB indica gotas grandes. Os 63,5 dBZ a 2–3 km, às 10:12, têm ZDR perto de 2 dB, o que não é assinatura de granizo grande seco.</p>
+        </div>
+        <div class="theory-card">
+          <h3><i class="fa-solid fa-arrow-up"></i> Havia corrente ascendente, que depois enfraquece</h3>
+          <p>Às 10:12 e 10:18, ZDR de cerca de 2 dB aparece até 4,6–5,3 km, 1,5–2 km acima da fusão (coluna de ZDR). Às 10:36, a 5 km, o ZDR já é 0,15 dB. Os topos esfriam até 10:20. É a sequência esperada antes de uma descida, com ressalva: a posição é extrapolada.</p>
+        </div>
+        <div class="theory-card">
+          <h3><i class="fa-solid fa-circle-exclamation"></i> O CC anômalo não é chuva</h3>
+          <p>Surge entre 10:24 e 10:30. Nos gates mais fortes, CC ≈ 0,74, ZDR de −0,05 a 0,35 dB e KDP ≈ 1,1 °/km, baixo para a refletividade (chuva de 56–60 dBZ tem KDP ≈ 2,8). Fica a 3–4 km do centro da chuva intensa. Às 10:42, só resta na camada mais baixa, a ~9 km atrás do núcleo.</p>
+        </div>
+      </div>
+      <table class="diag-table" style="margin-bottom:1.5rem;">
+        <thead><tr><th>Altura acima do radar (10:30)</th><th>Até 0,7 km</th><th>0,9 km</th><th>1,2–1,5 km</th><th>2,0 km</th><th>2,5 km</th><th>3,2 km</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Fração de CC &lt; 0,85 em Z ≥ 45 dBZ</strong></td><td>35–46%</td><td>25%</td><td>20–23%</td><td>12%</td><td>6%</td><td>1%</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-bottom:1.5rem; color:#cbd5e1;">A fração cresce de cima para baixo a partir da fusão. Isso combina com granizo em fusão caindo, mas também com detritos, mais densos embaixo. As 10:24 tinham no máximo 2%. <strong>Hidrometeoros sozinhos não decidem:</strong> CC tão baixo é incomum para granizo em banda S, e o critério de detritos cabe a 0,5°, mas nenhuma das duas leituras foi confirmada. Vento forte sem rotação também pode erguer destroços do aeroporto, então detritos não provariam tornado.</p>
+      <h3 style="font-family:'Outfit',sans-serif; font-size:1.15rem; margin-bottom:0.6rem; color:#e2e8f0;">Demais evidências</h3>
+      <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));">
+        <div class="gallery-item">
+          <img src="assets/radar_v2/chuva.png" alt="Z máximo por altura e horário, com CC de pelo menos 0,90" loading="lazy" />
+          <div class="gallery-caption"><strong>Z máximo por camada, só com CC ≥ 0,90.</strong> A camada mais baixa fica em 58, 59,5 e 58 dBZ às 10:24, 10:30 e 10:36. Com todos os gates, 10:30 chega a 65,5 dBZ, mas esse pico está dentro do CC anômalo. Não há descida nítida de um máximo. Células cinza não têm amostragem.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/radar_v2/vento.png" alt="Vento atrás da linha por altura às 10:30" loading="lazy" />
+          <div class="gallery-caption"><strong>Vento atrás da linha, 10:30.</strong> A componente em direção ao radar cai de 27 m/s a 130 m para 18 m/s a 810 m. Vale para uma única varredura, e as alturas são acima do radar.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/radar_v2/cisalhamento.png" alt="Velocidade radial e cisalhamento em 2 km, sem gates dobrados" loading="lazy" />
+          <div class="gallery-caption"><strong>Cisalhamento em 2 km, sem gates dobrados.</strong> Às 10:30, nenhum dos outros discos iguala o núcleo até 1,3°; de 1,8° a 4,0°, de um a dois o igualam ou superam. Radar único não separa rotação de cisalhamento.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/radar_v2/visivel_1330.png" alt="Canal visível do GOES-19 às 13:30 UTC" loading="lazy" />
+          <div class="gallery-caption"><strong>GOES-19, visível de 0,5 km.</strong> Topos borbulhantes ocupam 212 km² a cerca de 6 km do núcleo. Há outros aglomerados no recorte, e a posição do núcleo nas outras imagens é extrapolada.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/radar_v2/overshoot_1330.png" alt="Candidatos a overshoot no canal 13" loading="lazy" />
+          <div class="gallery-caption"><strong>GOES-19, canal 13.</strong> O único candidato perto do aeroporto, às 10:30, fica no limiar (6,6 K para um critério de 6,5 K), a cerca de 17 km.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/radar_v2/composicao_1330.png" alt="Satélite, echomax e composição às 13:30 UTC" loading="lazy" />
+          <div class="gallery-caption"><strong>Satélite e echomax, 10:30.</strong> Topo de nuvem, linha em arco e a composição dos dois.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/chapeco_trajetoria_nucleos.png" alt="Refletividade máxima acumulada e trajetória" loading="lazy" />
+          <div class="gallery-caption"><strong>Refletividade máxima de 09:00 a 12:00</strong> e eixo de propagação dos núcleos, sobre a malha do IBGE.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/chapeco_quadros_redemet.png" alt="Evolução do radar em seis horários" loading="lazy" />
+          <div class="gallery-caption"><strong>Evolução a 0,5°, de 09:30 a 11:12.</strong> Os rótulos "RIJ Intenso" e "Impacto" vêm da versão anterior e não são medidas.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUADRO 5: REPORTAGENS -->
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-title">
+          <i class="fa-solid fa-newspaper" style="color: var(--rose);"></i>
+          <span>5. O que as reportagens mostram</span>
+        </div>
+      </div>
+      <p style="margin-bottom:1rem; color:#cbd5e1;">Os títulos são os das próprias reportagens. As imagens mostram a destruição, mas não são um levantamento: nenhuma direção de queda foi medida nesta análise, então elas não decidem entre as hipóteses.</p>
+      <div class="theory-grid" style="grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));">
+        <div class="gallery-item">
+          <img src="https://i.ytimg.com/vi/CD5tX1zPhd0/hqdefault.jpg" alt="Imagem da reportagem: Tornado com ventos de 126 km/h destrói estruturas e danifica aeroporto de Chapecó" loading="lazy" />
+          <div class="gallery-caption">
+            Tornado com ventos de 126 km/h destrói estruturas e danifica aeroporto de Chapecó
+            <div style="margin-top:0.35rem;"><a href="https://www.youtube.com/watch?v=CD5tX1zPhd0" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="fa-brands fa-youtube"></i> Assistir no YouTube</a></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ytimg.com/vi/kyrtUfC92tY/hqdefault.jpg" alt="Imagem da reportagem: Tornado causa destruição em aeroporto de Chapecó e voos são suspensos" loading="lazy" />
+          <div class="gallery-caption">
+            Tornado causa destruição em aeroporto de Chapecó e voos são suspensos
+            <div style="margin-top:0.35rem;"><a href="https://www.youtube.com/watch?v=kyrtUfC92tY" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="fa-brands fa-youtube"></i> Assistir no YouTube</a></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ytimg.com/vi/fgC39R-vO1Q/hqdefault.jpg" alt="Imagem da reportagem: Tornado Devastador Deixa Rastro de Destruição em Chapecó SC | Rastro da Notícia" loading="lazy" />
+          <div class="gallery-caption">
+            Tornado Devastador Deixa Rastro de Destruição em Chapecó SC | Rastro da Notícia
+            <div style="margin-top:0.35rem;"><a href="https://www.youtube.com/watch?v=fgC39R-vO1Q" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="fa-brands fa-youtube"></i> Assistir no YouTube</a></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ytimg.com/vi/siFvd4jKE3s/hqdefault.jpg" alt="Imagem da reportagem: A Defesa Civil de Santa Catarina confirmou a ocorrência de um tornado em Chapecó" loading="lazy" />
+          <div class="gallery-caption">
+            A Defesa Civil de Santa Catarina confirmou a ocorrência de um tornado em Chapecó
+            <div style="margin-top:0.35rem;"><a href="https://www.youtube.com/watch?v=siFvd4jKE3s" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="fa-brands fa-youtube"></i> Assistir no YouTube</a></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ytimg.com/vi/bB3QOgYDj_E/hqdefault.jpg" alt="Imagem da reportagem: Tornado atinge Chapecó (SC) e aeroporto tem estruturas arrancadas" loading="lazy" />
+          <div class="gallery-caption">
+            Tornado atinge Chapecó (SC) e aeroporto tem estruturas arrancadas
+            <div style="margin-top:0.35rem;"><a href="https://www.youtube.com/watch?v=bB3QOgYDj_E" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:none;"><i class="fa-brands fa-youtube"></i> Assistir no YouTube</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const SCENES_DATA = [
+      {
+        id: 1,
+        tag: "CENA 1 · A PERGUNTA E O QUE OS DADOS DIZEM",
+        text: "Ventos de 126 km/h em Chapecó foram noticiados como tornado, confirmado pela Defesa Civil. Os dados do radar e do satélite favorecem uma microexplosão, mas deixam uma pendência: o CC anômalo sobre o aeroporto."
+      },
+      {
+        id: 2,
+        tag: "CENA 2 · MODELOS: SUPERCÉLULA E LINHA EM ARCO",
+        text: "O radar mostra uma linha em arco, forma que favorece ventos fortes em linha reta. Ela não exclui tornado: sistemas lineares também geram tornados, em geral curtos e difíceis de detectar."
+      },
+      {
+        id: 3,
+        tag: "CENA 3 · ESQUEMA DE UMA MICROEXPLOSÃO",
+        text: "O peso da chuva e do granizo arrasta o ar para baixo, e a evaporação e a fusão o resfriam. Ao chegar ao solo, o fluxo se espalha e forma uma frente de rajada."
+      },
+      {
+        id: 4,
+        tag: "CENA 4 · O TESTE QUE FALTA: A DIREÇÃO DE QUEDA",
+        text: "Queda convergente, em faixa estreita, favorece tornado. Queda divergente, em área larga, favorece microexplosão. Esse levantamento ainda não está nesta análise."
+      }
+    ];
+
+    let currentScene = 1;
+    let simPlaying = true;
+    let simTime = 0;
+    let paramDbz = 59;
+    
+    let paramWind = 126;
+
+    // Preload real radar images extracted from the loop for Canvas Scene 1
+    const radarImgs = [];
+    for (let i = 0; i < 7; i++) {
+      const im = new Image();
+      im.src = `assets/radar_frame_0${i}.png`;
+      radarImgs.push(im);
+    }
+
+    function seekMainVideo(sec) {
+      const v = document.getElementById('mainVideo');
+      if (v) {
+        v.currentTime = sec;
+        v.play();
+      }
+    }
+
+    function selectScene(id) {
+      currentScene = id;
+      simTime = 0;
+      const tabs = document.querySelectorAll('.scene-tab');
+      tabs.forEach((t, idx) => t.classList.toggle('active', idx + 1 === id));
+      const sc = SCENES_DATA[id - 1];
+      document.getElementById('simSceneTag').textContent = sc.tag;
+      document.getElementById('simSceneText').textContent = sc.text;
+    }
+
+    function toggleSimPlay() {
+      simPlaying = !simPlaying;
+      const btn = document.getElementById('btnPlayPause');
+      btn.innerHTML = simPlaying
+        ? '<i class="fa-solid fa-pause"></i> Pausar Animação'
+        : '<i class="fa-solid fa-play"></i> Retomar Animação';
+    }
+
+    function resetSimScene() {
+      simTime = 0;
+    }
+
+    function updateSimParams() {
+      paramDbz = parseInt(document.getElementById('slDbz').value, 10);
+      paramWind = parseInt(document.getElementById('slRij').value, 10);
+
+      document.getElementById('lblDbz').textContent = `${paramDbz} dBZ`;
+      document.getElementById('lblRij').textContent = `${paramWind} km/h (${(paramWind / 3.6).toFixed(1).replace('.', ',')} m/s)`;
+    }
+
+    // Web Speech API (pt-BR)
+    function speakCurrentScene() {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const sc = SCENES_DATA[currentScene - 1];
+      const u = new SpeechSynthesisUtterance(sc.text);
+      u.lang = 'pt-BR';
+      u.rate = parseFloat(document.getElementById('speechRate').value || '1.0');
+      const voices = window.speechSynthesis.getVoices();
+      const ptVoice = voices.find(v => v.lang && v.lang.toLowerCase().includes('pt-br')) || voices.find(v => v.lang && v.lang.toLowerCase().includes('pt'));
+      if (ptVoice) u.voice = ptVoice;
+      window.speechSynthesis.speak(u);
+    }
+
+    function pauseSpeech() {
+      if ('speechSynthesis' in window) {
+        if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+        else window.speechSynthesis.pause();
+      }
+    }
+
+    function stopSpeech() {
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    }
+
+    // Canvas Vector Drawing Helpers
+    function drawArrow(ctx, x0, y0, x1, y1, color, width = 3, head = 11) {
+      const ang = Math.atan2(y1 - y0, x1 - x0);
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.fillStyle = color;
+      ctx.lineWidth = width;
+      ctx.beginPath();
+      ctx.moveTo(x0, y0);
+      ctx.lineTo(x1, y1);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x1 - head * Math.cos(ang - 0.45), y1 - head * Math.sin(ang - 0.45));
+      ctx.lineTo(x1 - head * Math.cos(ang + 0.45), y1 - head * Math.sin(ang + 0.45));
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
+    const canvas = document.getElementById('simCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function renderLoop() {
+      if (simPlaying) simTime += 0.025;
+      const W = canvas.width;
+      const H = canvas.height;
+
+      // Clear & Grid
+      ctx.fillStyle = '#080c15';
+      ctx.fillRect(0, 0, W, H);
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.06)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < W; x += 40) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+      }
+      for (let y = 0; y < H; y += 40) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+      }
+
+      // Top HUD inside Canvas
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.92)';
+      ctx.fillRect(0, 0, W, 54);
+      ctx.fillStyle = '#38bdf8';
+      ctx.font = 'bold 16px "JetBrains Mono", monospace';
+      ctx.fillText(SCENES_DATA[currentScene - 1].tag, 24, 33);
+      ctx.fillStyle = '#fbbf24';
+      ctx.fillText(`Ilustração  |  Z = ${paramDbz} dBZ  |  ${paramWind} km/h`, W - 510, 33);
+
+      if (currentScene === 1) {
+        // Scene 1: Real Radar Frame Sequence + Chapeco Target
+        const idx = Math.floor(simTime * 1.2) % radarImgs.length;
+        const im = radarImgs[idx];
+        if (im && im.complete && im.naturalWidth > 0) {
+          ctx.drawImage(im, 30, 75, 760, 560);
+        }
+        ctx.strokeStyle = '#38bdf8';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(30, 75, 760, 560);
+
+        // Pulse over Chapecó
+        const cx = 568, cy = 285;
+        const rPulse = 14 + 6 * Math.sin(simTime * 5);
+        ctx.strokeStyle = '#f43f5e';
+        ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.arc(cx, cy, rPulse, 0, Math.PI * 2); ctx.stroke();
+        ctx.fillStyle = '#f43f5e';
+        ctx.beginPath(); ctx.arc(cx, cy, 5, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = 'rgba(15,23,42,0.9)';
+        ctx.fillRect(cx + 16, cy - 18, 175, 32);
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 14px Inter, sans-serif';
+        ctx.fillText(`Chapecó (${paramWind} km/h)`, cx + 24, cy + 3);
+
+        // Right comparison cards
+        ctx.fillStyle = 'rgba(69, 10, 10, 0.65)';
+        ctx.fillRect(820, 95, 430, 220);
+        ctx.strokeStyle = '#f43f5e';
+        ctx.strokeRect(820, 95, 430, 220);
+        ctx.fillStyle = '#fb7185';
+        ctx.font = 'bold 16px Outfit, sans-serif';
+        ctx.fillText('NA IMPRENSA E NA DEFESA CIVIL', 840, 130);
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 20px Outfit, sans-serif';
+        ctx.fillText('Tornado em Chapecó', 840, 165);
+        ctx.fillStyle = '#fecdd3';
+        ctx.font = '15px Inter, sans-serif';
+        ctx.fillText('Cisalhamento localizado, mas ambíguo', 840, 205);
+        ctx.fillText('CC anômalo: pode indicar detritos', 840, 235);
+        ctx.fillText('Falta a direção de queda em campo', 840, 265);
+
+        ctx.fillStyle = 'rgba(6, 78, 59, 0.65)';
+        ctx.fillRect(820, 345, 430, 285);
+        ctx.strokeStyle = '#10b981';
+        ctx.strokeRect(820, 345, 430, 285);
+        ctx.fillStyle = '#34d399';
+        ctx.font = 'bold 16px Outfit, sans-serif';
+        ctx.fillText('HIPÓTESE PRINCIPAL (NÃO FECHADA)', 840, 380);
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 20px Outfit, sans-serif';
+        ctx.fillText('Microexplosão na linha em arco', 840, 415);
+        ctx.fillStyle = '#d1fae5';
+        ctx.font = '15px Inter, sans-serif';
+        ctx.fillText('Corrente ascendente forte, depois enfraquece', 840, 455);
+        ctx.fillText('Chuva intensa até a camada mais baixa', 840, 485);
+        ctx.fillText('Vento maior embaixo, atrás da linha', 840, 515);
+        ctx.fillText('Falta explicar o CC anômalo', 840, 545);
+
+      } else if (currentScene === 2) {
+        // Scene 2: Supercell vs QLCS Bow Echo
+        // Left box: Supercell
+        ctx.fillStyle = '#0c1324';
+        ctx.fillRect(40, 80, 560, 580);
+        ctx.strokeStyle = '#f43f5e';
+        ctx.strokeRect(40, 80, 560, 580);
+        ctx.fillStyle = '#fb7185';
+        ctx.font = 'bold 18px Outfit, sans-serif';
+        ctx.fillText('MODELO: SUPERCÉLULA CLÁSSICA', 65, 118);
+
+        // Hook echo synthetic drawing
+        const scx = 310, scy = 350;
+        ctx.fillStyle = 'rgba(1, 197, 1, 0.55)';
+        ctx.beginPath(); ctx.ellipse(scx + 20, scy - 25, 165, 110, -0.2, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = 'rgba(253, 188, 0, 0.75)';
+        ctx.beginPath(); ctx.ellipse(scx + 5, scy - 20, 115, 75, -0.2, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = 'rgba(253, 0, 0, 0.88)';
+        ctx.beginPath(); ctx.ellipse(scx - 15, scy - 10, 75, 48, -0.1, 0, Math.PI * 2); ctx.fill();
+        // Hook appendage
+        ctx.lineWidth = 26;
+        ctx.strokeStyle = 'rgba(253, 0, 0, 0.9)';
+        ctx.beginPath();
+        ctx.arc(scx - 65, scy + 45, 48, 0.2, Math.PI * 1.35);
+        ctx.stroke();
+        // Rotating vortex arrows
+        for (let k = 0; k < 4; k++) {
+          const a = simTime * 2.5 + k * Math.PI / 2;
+          drawArrow(ctx, scx - 65 + 34 * Math.cos(a), scy + 45 + 34 * Math.sin(a),
+            scx - 65 + 34 * Math.cos(a + 0.7), scy + 45 + 34 * Math.sin(a + 0.7), '#fbbf24', 3, 9);
+        }
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 14px Inter, sans-serif';
+        ctx.fillText('Eco em Gancho + Mesociclone + BWER', 180, 505);
+        ctx.fillStyle = '#f43f5e';
+        ctx.fillText('Ilustração, não é dado de Chapecó', 180, 535);
+
+        // Right box: QLCS Bow Echo
+        ctx.fillStyle = '#0c1324';
+        ctx.fillRect(640, 80, 600, 580);
+        ctx.strokeStyle = '#10b981';
+        ctx.strokeRect(640, 80, 600, 580);
+        ctx.fillStyle = '#34d399';
+        ctx.font = 'bold 18px Outfit, sans-serif';
+        ctx.fillText('MODELO: LINHA EM ARCO (FORMA VISTA NO RADAR)', 665, 118);
+
+        const bx = 920 + 18 * Math.sin(simTime * 1.5), by = 355;
+        // Stratiform rain at rear
+        ctx.fillStyle = 'rgba(1, 159, 244, 0.4)';
+        ctx.beginPath(); ctx.ellipse(bx - 75, by, 145, 155, 0, 0, Math.PI * 2); ctx.fill();
+        // Rear Inflow Notch (RIN)
+        ctx.fillStyle = '#0c1324';
+        ctx.beginPath();
+        ctx.moveTo(bx - 230, by - 55);
+        ctx.lineTo(bx - 55, by);
+        ctx.lineTo(bx - 230, by + 55);
+        ctx.closePath();
+        ctx.fill();
+        // Bow Echo Arc
+        for (let deg = -65; deg <= 65; deg += 5) {
+          const rad = deg * Math.PI / 180;
+          const px = bx - 25 + 155 * Math.cos(rad) * 0.85;
+          const py = by + 155 * Math.sin(rad);
+          ctx.fillStyle = Math.abs(deg) < 18 ? '#bc00fd' : (Math.abs(deg) < 42 ? '#fd0000' : '#fdbc00');
+          ctx.beginPath(); ctx.arc(px, py, Math.abs(deg) < 18 ? 22 : 28, 0, Math.PI * 2); ctx.fill();
+        }
+        // RIJ arrows
+        drawArrow(ctx, bx - 220, by - 22, bx - 50, by - 8, '#38bdf8', 4, 12);
+        drawArrow(ctx, bx - 220, by + 22, bx - 50, by + 8, '#38bdf8', 4, 12);
+        ctx.fillStyle = '#38bdf8';
+        ctx.font = 'bold 14px Inter, sans-serif';
+        ctx.fillText('Jato Traseiro (RIJ)', bx - 225, by - 38);
+
+        // Divergent wind arrows at Bow Apex
+        for (let d = -28; d <= 28; d += 14) {
+          const r = d * Math.PI / 180;
+          drawArrow(ctx, bx + 115, by + d * 0.7, bx + 115 + 75 * Math.cos(r), by + d * 0.7 + 75 * Math.sin(r), '#fbbf24', 3, 10);
+        }
+        ctx.fillStyle = '#34d399';
+        ctx.fillText('Ilustração: núcleo, jato traseiro e frente de rajada', 735, 535);
+
+
+      } else if (currentScene === 3) {
+        // Scene 4: Vertical Cross-Section of Wet Microburst + Vortex Ring
+        const groundY = 610;
+        ctx.fillStyle = '#1e293b';
+        ctx.fillRect(40, groundY, W - 80, 70);
+        ctx.strokeStyle = '#10b981';
+        ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.moveTo(40, groundY); ctx.lineTo(W - 40, groundY); ctx.stroke();
+
+        // 0°C Freezing isotherm
+        const z0Y = 340;
+        ctx.setLineDash([10, 8]);
+        ctx.strokeStyle = '#38bdf8';
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(60, z0Y); ctx.lineTo(W - 60, z0Y); ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = '#38bdf8';
+        ctx.font = 'bold 14px Inter, sans-serif';
+        ctx.fillText('Isoterma 0 °C (Fusão do Granizo: -L_f · dq_i)', W - 360, z0Y - 10);
+
+        // Descending Core
+        const cx = 640;
+        const drop = ((simTime * 65) % 240);
+        const coreY = 210 + drop;
+
+        ctx.fillStyle = 'rgba(30, 64, 175, 0.35)';
+        ctx.beginPath();
+        ctx.moveTo(cx - 110, 140);
+        ctx.lineTo(cx + 110, 140);
+        ctx.lineTo(cx + 185, groundY);
+        ctx.lineTo(cx - 185, groundY);
+        ctx.closePath();
+        ctx.fill();
+
+        // High dBZ core
+        ctx.fillStyle = 'rgba(253, 0, 0, 0.8)';
+        ctx.beginPath(); ctx.ellipse(cx, coreY, 95, 58, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = 'rgba(188, 0, 253, 0.9)';
+        ctx.beginPath(); ctx.ellipse(cx, coreY, 55, 34, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 16px "JetBrains Mono", monospace';
+        ctx.fillText(`Z = ${paramDbz} dBZ`, cx - 48, coreY + 6);
+
+        // RIJ dry air entrainment from left
+        drawArrow(ctx, 140, 310, cx - 120, 355, '#38bdf8', 5, 14);
+        drawArrow(ctx, 140, 360, cx - 110, 395, '#38bdf8', 5, 14);
+        ctx.fillStyle = '#38bdf8';
+        ctx.font = 'bold 15px Inter, sans-serif';
+        ctx.fillText('Jato Traseiro (RIJ): Ar seco → Evaporação intensa', 95, 285);
+
+        // Downdraft arrows
+        for (let dx of [-45, 0, 45]) {
+          drawArrow(ctx, cx + dx, 240, cx + dx * 1.25, groundY - 22, '#f43f5e', 5, 14);
+        }
+
+        // Spreading Vortex Rings & Surface Outflow
+        const spread = 150 + ((simTime * 95) % 260);
+        drawArrow(ctx, cx - 30, groundY - 14, cx - spread, groundY - 14, '#fbbf24', 6, 15);
+        drawArrow(ctx, cx + 30, groundY - 14, cx + spread, groundY - 14, '#fbbf24', 7, 16);
+
+        // Vortex ring rotors
+        for (let side of [-1, 1]) {
+          const vx = cx + side * (spread - 20);
+          const vy = groundY - 55;
+          ctx.strokeStyle = '#fbbf24';
+          ctx.lineWidth = 3;
+          ctx.beginPath(); ctx.ellipse(vx, vy, 48, 36, 0, 0, Math.PI * 2); ctx.stroke();
+        }
+
+        ctx.fillStyle = '#34d399';
+        ctx.font = 'bold 17px "JetBrains Mono", monospace';
+        ctx.fillText(`Esquema: frente de rajada, ${paramWind} km/h`, cx + 95, groundY + 42);
+
+      } else {
+        // Scene 5: Damage Footprint Comparison
+        // Left: Tornado Convergent Swath
+        ctx.fillStyle = '#0c1324';
+        ctx.fillRect(45, 90, 560, 560);
+        ctx.strokeStyle = '#f43f5e';
+        ctx.strokeRect(45, 90, 560, 560);
+        ctx.fillStyle = '#fb7185';
+        ctx.font = 'bold 18px Outfit, sans-serif';
+        ctx.fillText('ESQUEMA A: TORNADO (CONVERGENTE)', 70, 130);
+
+        ctx.strokeStyle = 'rgba(244, 63, 94, 0.6)';
+        ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.moveTo(90, 360); ctx.lineTo(560, 360); ctx.stroke();
+        for (let x = 130; x <= 520; x += 75) {
+          drawArrow(ctx, x, 280, x + 32, 335, '#fb7185', 3, 10);
+          drawArrow(ctx, x, 440, x + 28, 385, '#fb7185', 3, 10);
+        }
+        ctx.fillStyle = '#fecdd3';
+        ctx.font = '15px Inter, sans-serif';
+        ctx.fillText('Esquema: rastro estreito, com queda para o eixo central', 70, 585);
+
+        // Right: Wet Microburst Divergent Fan-Out
+        ctx.fillStyle = '#0c1324';
+        ctx.fillRect(645, 90, 590, 560);
+        ctx.strokeStyle = '#10b981';
+        ctx.strokeRect(645, 90, 590, 560);
+        ctx.fillStyle = '#34d399';
+        ctx.font = 'bold 18px Outfit, sans-serif';
+        ctx.fillText('ESQUEMA B: MICROEXPLOSÃO (DIVERGENTE)', 670, 130);
+
+        const ix = 760, iy = 360;
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.25)';
+        ctx.strokeStyle = '#38bdf8';
+        ctx.beginPath(); ctx.arc(ix, iy, 32, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+
+        for (let r of [90, 185, 280, 375]) {
+          for (let deg of [-32, -16, 0, 16, 32]) {
+            const rad = deg * Math.PI / 180;
+            const sx = ix + r * Math.cos(rad);
+            const sy = iy + r * 0.48 * Math.sin(rad);
+            const ex = sx + 48 * Math.cos(rad * 0.85);
+            const ey = sy + 48 * Math.sin(rad * 0.85);
+            drawArrow(ctx, sx, sy, ex, ey, Math.abs(deg) <= 10 ? '#fbbf24' : '#34d399', 3, 10);
+          }
+        }
+        ctx.fillStyle = '#d1fae5';
+        ctx.font = '15px Inter, sans-serif';
+        ctx.fillText('Esquema: a direção de queda em Chapecó ainda precisa do levantamento de campo', 670, 585);
+      }
+
+      requestAnimationFrame(renderLoop);
+    }
+
+    requestAnimationFrame(renderLoop);
+  </script>
+</body>
+</html>
