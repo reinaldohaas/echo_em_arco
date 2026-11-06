@@ -6,9 +6,16 @@ Análise preliminar do evento de 4 de novembro de 2026, com volumes brutos do ra
 
 ## Diagnóstico
 
-**Hipótese principal: microexplosão dentro de uma linha em arco. O caso não está fechado.** A Defesa Civil confirmou tornado, e estes dados não permitem descartá-lo. O teste que falta é o levantamento da direção de queda em campo.
+**Hipótese principal: microexplosão dentro de uma linha em arco. O caso não está fechado.** A Defesa Civil confirmou tornado. Estes dados pesam contra tornado supercelular, sobretudo pela ausência de BWER, mas não permitem descartar tornado de sistema linear. O teste que falta é o levantamento da direção de queda em campo.
 
-Vídeos e fotos publicados, com a contagem a favor e contra cada hipótese, estão em [`CHECKLIST_HIPOTESES.md`](CHECKLIST_HIPOTESES.md). Contando só dados observados e aplicando a literatura citada, 8 itens favorecem vento linear e nenhum favorece tornado, com o CC anômalo e o cisalhamento neutros. Nenhum é decisivo, e esses itens não distinguem microexplosão de outros mecanismos de vento linear. Ainda faltam a direção de queda e a série de vento durante a passagem.
+Vídeos e fotos publicados, com a contagem a favor e contra cada hipótese, estão em [`CHECKLIST_HIPOTESES.md`](CHECKLIST_HIPOTESES.md). Contando só dados observados e aplicando a literatura citada, 12 itens favorecem vento linear e nenhum favorece tornado supercelular, com o CC anômalo e o cisalhamento neutros. Nenhum é decisivo, e esses itens não distinguem microexplosão de outros mecanismos de vento linear. Ainda faltam a direção de queda e a série de vento durante a passagem.
+
+| Contagem | A favor | Contra |
+|---|---|---|
+| Vento linear | 12 (3 médios, 9 fracos) | 0 |
+| Tornado supercelular | 0 | 8 (1 forte, 1 médio, 6 fracos) |
+
+Os pesos são julgamento e vários itens não são independentes. Tornado de sistema linear fica fora da contagem. Como taxa de base, Ashley et al. (2019) atribuem a sistemas lineares nos EUA ~15 relatos de vento severo por relato de tornado, mas ~2 por 1 em vento significativo; isso não é observação deste caso nem contagem de microexplosões.
 
 | Evidência | Observado | Leitura |
 |---|---|---|
