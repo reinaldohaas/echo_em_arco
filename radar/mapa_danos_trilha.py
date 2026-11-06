@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-r"""Mapa: bairros com danos relatados, trilha do radar e hidrografia. Mede extensão e retilinidade.
+r"""Mapa: bairros com danos relatados, trilha do radar e hidrografia. Mede extensão e retilinearidade.
 
 Limite principal: a Defesa Civil divulgou bairros, não pontos de dano. Por isso, centroides e polígonos dão
 um ENVELOPE da área, não a faixa real de destruição.
