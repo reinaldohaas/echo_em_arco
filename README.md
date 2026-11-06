@@ -18,7 +18,7 @@ Vídeos e fotos publicados, com a contagem a favor e contra cada hipótese, est�
 | Vento atrás da linha, 10:30 | Componente radial de 27 m/s a 130 m e 18 m/s a 810 m | Compatível com saída de ar; só uma varredura |
 | Cisalhamento | Às 10:30, em 2 km e sem *gates* dobrados, fica entre os maiores da varredura até ~0,7 km acima do radar; não se mantém às 10:24 nem às 10:36 | Sinal localizado, mas ambíguo: radar único não separa rotação de cisalhamento |
 | *Overshoot* | Topos borbulhantes no visível, 212 km² a ~6 km do núcleo às 10:30; canal 13 no limiar (contraste de 6,6 K para um limiar de 6,5 K) | Apoio moderado; há outros aglomerados no recorte |
-| CC anômalo | CC ≈ 0,74, ZDR ≈ 0 e KDP ≈ 1,1 °/km nos *gates* mais fortes | **Principal pendência:** granizo em fusão ou detritos |
+| CC anômalo | CC ≈ 0,74, ZDR ≈ 0 e KDP ≈ 1,1 °/km nos *gates* mais fortes | **Principal pendência:** granizo em fusão ou detritos. Detritos não são argumento contra microexplosão, pois vento linear forte também pode erguê-los. |
 
 ## Corte vertical e hidrometeoros
 
