@@ -15,6 +15,7 @@ import math
 import multiprocessing as mp
 import pathlib
 import random
+import re
 import subprocess
 import sys
 import zipfile
@@ -74,7 +75,7 @@ CENAS = [
     "Com os dados reais, a melhor hipótese continua sendo a microexplosão, dentro da linha em arco, mas ela não está provada. "
     "O tornado não está descartado, e só o levantamento de danos pode encerrar a questão. "
     "E, na próxima manchete sobre um vendaval, vale fazer uma pergunta simples: para que lado caíram as árvores? "
-    "Uma ressalva, isto é ciência, não veredito. "
+    "Uma ressalva: isto é ciência, não veredito. "
     "O código e os resultados estão no GitHub, para qualquer pessoa usar e refutar.",
 ]
 
@@ -231,14 +232,23 @@ $s.Dispose()
     return wav, dur, pal
 
 
+def _sem_pontuacao(texto):
+    return re.sub(r"[,;:]", "", texto)
+
+
 def preparar_narracao():
     OUT.mkdir(exist_ok=True)
     saida = []
     for i, texto in enumerate(CENAS, 1):
         clonada, tempos = VOZ / f"slide_{i:03d}.wav", VOZ / f"slide_{i:03d}.json"
         meta = json.loads(tempos.read_text(encoding="utf-8")) if tempos.exists() else {}
-        if clonada.exists() and meta.get("texto") == texto:
-            saida.append((str(clonada), duracao(clonada), [tuple(q) for q in meta["palavras"]]))
+        # Pontuação não muda a fala: a voz clonada continua valendo, e a legenda usa a pontuação atual.
+        if clonada.exists() and _sem_pontuacao(meta.get("texto", "")) == _sem_pontuacao(texto):
+            pal = [tuple(q) for q in meta["palavras"]]
+            toks = texto.split()
+            if len(toks) == len(pal):
+                pal = [(tok, ini, fim) for tok, (_, ini, fim) in zip(toks, pal)]
+            saida.append((str(clonada), duracao(clonada), pal))
         else:
             wav, dur, pal = narracao_local(i, texto)
             saida.append((str(wav), dur, pal))
@@ -261,9 +271,21 @@ class Tempo:
         raise ValueError(f"palavra não encontrada na narração: {prefixo}")
 
 
+def palavras_legenda(pal):
+    """A fala diz "decibéis zê", mas a legenda mostra "dBZ"; os tempos das palavras não mudam."""
+    saida = []
+    for p in pal:
+        if saida and saida[-1][0] == "decibéis" and p[0].startswith("zê"):
+            saida[-1] = ("dBZ" + p[0][2:], saida[-1][1], p[2])
+        else:
+            saida.append(tuple(p))
+    return saida
+
+
 def legenda(tela, pal, t):
     """Duas partes: faixa fixa e bloco de palavras com a palavra atual em âmbar."""
     tela.d.rectangle([0, 950 * SS, W * SS, H * SS], fill=(6, 10, 20))
+    pal = palavras_legenda(pal)
     blocos, cur = [], []
     for p in pal:
         cur.append(p)
@@ -449,9 +471,10 @@ def cena3(tl, t, b, rec, dur):
     a_d = suave((t - b("denso")) / .4)
     cartao(510, 165, "Mais denso", "Ele afunda com mais força", a_d, AMBAR)
     tl.caixa(1320, 700, 1880, 915, borda=LINHA)
-    tl.txt(1600, 755, "B ≈ g ( θ'/θ − q )", 50, BRANCO, True, "mm", fundo=PAINEL)
-    tl.txt(1350, 810, "B: flutuabilidade; θ': déficit térmico;", 27, CINZA, fundo=PAINEL)
-    tl.txt(1350, 850, "q: chuva e gelo. Forma simplificada.", 27, CINZA, fundo=PAINEL)
+    tl.txt(1600, 755, "B ≈ g ( θ'/θ₀ − q_h )", 50, BRANCO, True, "mm", fundo=PAINEL)
+    tl.txt(1350, 800, "B: flutuabilidade; θ': déficit térmico;", 27, CINZA, fundo=PAINEL)
+    tl.txt(1350, 833, "q_h: razão de mistura de chuva e gelo", 27, CINZA, fundo=PAINEL)
+    tl.txt(1350, 866, "Forma simplificada.", 27, CINZA, fundo=PAINEL)
 
 
 def cena4(tl, t, b, rec, dur):
