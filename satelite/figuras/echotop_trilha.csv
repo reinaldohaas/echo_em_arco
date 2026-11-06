@@ -1,0 +1,11 @@
+radar_utc,r_km,alcance_km,ET18_max,ET40_max,truncado18,truncado40
+13:00,71.8,28.3,14.6,9.1,False,False
+13:06,57.4,22.9,14.2,10.7,False,False
+13:12,43.1,17.9,13.8,9.3,False,False
+13:18,29.1,12.9,12.9,11.5,True,False
+13:24,16.1,8.2,8.2,7.9,True,False
+13:30,9.6,5.7,5.7,5.4,True,False
+13:36,18.7,9.2,9.2,7.4,True,False
+13:42,32.1,14.0,13.3,12.0,False,False
+13:48,46.1,19.0,14.2,7.5,False,False
+13:54,60.5,24.2,14.2,5.0,False,False
